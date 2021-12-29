@@ -9,7 +9,7 @@ package paquete5;
  *
  * @author reroes
  */
-public class Problema05 {
+public class Problema051 {
 
     public static void main(String[] args) {
         String[][] estudiantes = {{"Sarah Ward", "Philip Payne"},
@@ -20,10 +20,19 @@ public class Problema05 {
         String cadena = "";
         for (int i = 0; i < estudiantes.length; i++) {
             for (int j = 0; j < 2; j++) {
-                if ("S".equals(estudiantes[i][j].charAt(0))
-                        || "P".equals(estudiantes[i][j].charAt(0))
-                        || "T".equals(estudiantes[i][j].charAt(0))) {
-                    cadena = String.format("%s %s\n", cadena, estudiantes[i][j]);
+                if ("S".equals(estudiantes[i][j].charAt(0))) {
+                    cadena = String.format("%s %s\n", cadena,
+                            estudiantes[i][j]);
+                } else {
+                    if ("P".equals(estudiantes[i][j].charAt(0))) {
+                        cadena = String.format("%s %s\n", cadena,
+                                estudiantes[i][j]);
+                    } else {
+                        if ("T".equals(estudiantes[i][j].charAt(0))) {
+                            cadena = String.format("%s %s\n", cadena,
+                                    estudiantes[i][j]);
+                        }
+                    }
                 }
 
             }
@@ -31,4 +40,3 @@ public class Problema05 {
         System.out.println(cadena);
     }
 }
-//No me aparece la cadena 
